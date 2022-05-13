@@ -20,33 +20,6 @@ function getScore(score){
     let scoreD = score >= 60 && score <= 69
     let scoreF = score <  60 && score >= 0
 
-
-    switch (score) {
-        case scoreA:
-            scoreFinal = "A"
-            break;
-
-        case scoreB:
-            scoreFinal = "B"
-            break;
-
-        case scoreC:
-            scoreFinal = "C"
-            break;
-
-        case scoreD:
-            scoreFinal = "D"
-            break;
-
-        case scoreF:
-            scoreFinal = "F"
-            break;
-
-        default:
-            scoreFinal = "Invalid"
-            break;
-    }
-
     if (scoreA) {
         scoreFinal = "A"
     }else if(scoreB){
@@ -65,4 +38,4 @@ function getScore(score){
     return scoreFinal
 }
     
-console.log(getScore(95))
+console.log(getScore(80))
