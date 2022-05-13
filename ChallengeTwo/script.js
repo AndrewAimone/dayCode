@@ -27,3 +27,41 @@ function expenseControl(){
     
 }
 expenseControl()
+
+
+// Other Form
+
+let family = {
+    incomes :   [2500, 3000.6, 300.78],
+    expenses:   [1500, 300.98, 100.5],
+}
+
+function sum(array){
+    let total = 0
+
+    for (const value of array) {
+        total += value
+    }
+
+    return total
+}
+
+function calculateBalance(){
+    const calculateIncomes = sum(family.incomes)
+    const calculateExpenses = sum(family.expenses)
+
+    const total = calculateIncomes - calculateExpenses
+    
+    const itsOk = total >= 0
+    
+    let balanceText = "Negative"
+    
+    if (itsOk){
+        balanceText = "Positive"
+    }
+
+    console.log(`Your Balance is ${balanceText}: ${total.toFixed(2)} R$`);
+
+}
+
+calculateBalance()
