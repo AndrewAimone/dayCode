@@ -1,17 +1,17 @@
 function expenseControl(){
     
     let controlFamily = {
-        recipes  : [100, 50, 200, 500] ,
+        incomes  : [100, 50, 200, 500] ,
         expenses : [300, 800, 900, 10] ,
 
     }
     
-    let sumRecipes = 0
+    let sumIncomes = 0
     let sumExpenses = 0
 
 
-    for (let i = 0; i < controlFamily.recipes.length; i++) {
-        sumRecipes += controlFamily.recipes[i];
+    for (let i = 0; i < controlFamily.incomes.length; i++) {
+        sumIncomes += controlFamily.incomes[i];
         
     }
 
@@ -20,7 +20,7 @@ function expenseControl(){
      
     }
 
-    let calcFamily = sumRecipes - sumExpenses
+    let calcFamily = sumIncomes - sumExpenses
 
 
     console.log(`Family Balance: ${calcFamily}`)
